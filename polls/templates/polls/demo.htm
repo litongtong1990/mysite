@@ -9,7 +9,7 @@
 <body>
 
 
-
+<!-- 
 
 <div id="a1"></div>
 
@@ -18,14 +18,14 @@
 
 	var flashvars={
 		//f:'http://movie.ks.js.cn/flv/other/1_0.flv',
-		//f:'ftp://10.140.41.190/xxx/demo.flv',
+		//f:'ftp://10.140.29.24/xxx/demo.flv',
 		//f:'rtmp://139.196.10.27:1935/live/test.stream',
 		// this is used for test rtmp
-
 		f:'rtmp://live.hkstv.hk.lxdns.com/live/hks',
 		c:0,
 		b:1
 		};
+
 	var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
 	
 	CKobject.embedSWF('/static/ckplayer/ckplayer.swf','a1','ckplayer_a1','600','400',flashvars,params);
@@ -35,9 +35,9 @@
 	下面三行是调用html5播放器用到的
 	*/
 
-	// var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
-	// var support=['iPad','iPhone','ios','android+false','msie10+false'];
-	// CKobject.embedHTML5('a1','ckplayer_a1',600,400,video,flashvars,support);
+	var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
+	var support=['iPad','iPhone','ios','android+false','msie10+false'];
+	CKobject.embedHTML5('a1','ckplayer_a1',600,400,video,flashvars,support);
 
 
 	function closelights(){//关灯
@@ -47,25 +47,25 @@
 		alert(' 本演示不支持开关灯');
 	}
   </script>
-
-
-
-
-
-
-
-<!-- 
-<div id="a1"></div>
-<script type="text/javascript" src="/static/ckplayer/ckplayer.js" charset="utf-8"></script>
-<script type="text/javascript">
-    var flashvars={
-        f:'rtmp://139.196.10.27:1935/live/test.stream',
-        c:0
-    };
-    var video=['rtmp://139.196.10.27:1935/live/test.stream'];
-    CKobject.embed('/static/ckplayer/ckplayer.swf','a1','ckplayer_a1','600','400',false,flashvars,video);
-</script>
  -->
+
+
+<div id="a1"></div>
+<script type="text/javascript"src="/static/ckplayer/ckplayer.js"charset="utf-8"></script>
+<script type="text/javascript">
+ var flashvars={
+	
+	//f:'ftp://10.140.29.24/xxx/demov2.mp4',
+	f:'rtmp://live.hkstv.hk.lxdns.com/live/hks',
+	c:0,
+	loaded:'loadedHandler'
+};
+
+var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4'];
+CKobject.embed('/static/ckplayer/ckplayer.swf','a1','ckplayer_a1','600','400',false,flashvars,video);
+</script>
+
+
 
 </body>
 </html>
